@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=auto');
+
+:root {
+  color-scheme: dark light;
+
+  --color-stone-50: oklch(98.5% 0.001 106.423);
+  --color-stone-300: oklch(86.9% 0.005 56.366);
+  --color-stone-500: oklch(55.3% 0.013 58.071);
+  --color-stone-700: oklch(37.4% 0.01 67.558);
+  --color-stone-800: oklch(26.8% 0.007 34.298);
+
+  --color-neutral-50: oklch(98.5% 0 0);
+  --color-neutral-950: oklch(14.5% 0 0);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: var(--color-neutral-50);
+    --background: var(--color-stone-800);
+
+    --card-background: var(--color-stone-700);
+    --card-border-background: var(--color-stone-500);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --foreground: var(--color-neutral-950);
+    --background: var(--color-stone-50);
+
+    --card-background: var(--color-stone-50);
+    --card-border-background: var(--color-stone-300);
+  }
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+
+  background-color: var(--background);
+
+  padding: 1dvi;
+  width: 100dvw;
+  height: 100dvh;
+
+  display: grid;
+  grid-gap: 1dvi;
+  grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
+}
+
+.card {
+  container-name: card;
+
+  border-width: 1px;
+  border-radius: 0.5rem;
+  border-style: solid;
+  border-color: var(--card-border-background);
+
+  display: grid;
+  place-items: center;
+
+  font-weight: 700;
+  color: var(--foreground);
+  background-color: var(--card-background);
+
+  cursor: pointer;
+
+  & iconify-icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+  }
+}
+
+.fullscreen {
+  padding: 0;
+  display: block;
+
+  & .card {
+    filter: none;
+    border: none;
+    border-radius: 0;
+  }
+}
+
+@media (orientation: landscape) {
+  :root {
+    --columns: 7;
+  }
+
+  .card {
+    font-size: 10cqb;
+  }
+
+  .fullscreen {
+    & .card {
+      font-size: 50dvb;
+    }
+  }
+}
+
+@media (orientation: portrait) {
+  :root {
+    --columns: 2;
+  }
+
+  .card {
+    font-size: 10cqi;
+  }
+
+  .fullscreen {
+    & .card {
+      font-size: 50dvi;
+    }
+  }
+}

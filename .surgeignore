@@ -1,0 +1,6 @@
+.git
+.vscode
+package.json
+package-lock.json
+README.md
+LICENSE

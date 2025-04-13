@@ -1,0 +1,31 @@
+{
+  "name": "planning-poker-cards",
+  "version": "1.0.0",
+  "description": "Simple set of Fibonacci sequence planning poker cards to select from and show in an estimation meeting.",
+  "main": "cards.js",
+  "scripts": {
+    "publish": "surge ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/murphyslaw/planning-poker-cards.git"
+  },
+  "keywords": [
+    "planning",
+    "poker",
+    "cards",
+    "estimation",
+    "scrum",
+    "agile",
+    "fibonacci"
+  ],
+  "author": "Falk Köppe <falk.koeppe@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/murphyslaw/planning-poker-cards/issues"
+  },
+  "homepage": "https://github.com/murphyslaw/planning-poker-cards#readme",
+  "devDependencies": {
+    "surge": "^0.24.6"
+  }
+}
