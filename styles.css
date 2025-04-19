@@ -1,4 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=auto');
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 :root {
   color-scheme: dark light;
@@ -54,8 +69,8 @@
   --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M2 21h18v-2H2M20 8h-2V5h2m0-2H4v10a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4v-3h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2'/%3E%3C/svg%3E");
 }
 
-body {
-  font-family: 'Nunito', sans-serif;
+main {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 16px;
 
   background-color: var(--background);
@@ -88,7 +103,7 @@ body {
   cursor: pointer;
 }
 
-.fullscreen {
+.fullscreen main {
   padding: 0;
   display: block;
 }
